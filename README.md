@@ -3,6 +3,14 @@ A super-simple (but extensible) Hugo template.
 
 ## Introduction
 
+## Install the Theme
+
+Navigate to your site's root directory in the terminal and use the following command to install the theme:
+
+```
+git submodule add https://github.com/rickwysocki/littleGhost.git themes/littleGhost
+```
+
 ## Configuration
 
 ```

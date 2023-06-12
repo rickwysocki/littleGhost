@@ -1,0 +1,15 @@
+{{ define "main" }}
+{{ partial "metadata.html" . }}
+<br><br>
+
+{{ $image := .Resources.GetMatch .Params.featured_image }}
+
+{{ with $image }}
+<figure>
+<img src="{{ ($image.Resize "1200x").RelPermalink }}" alt=" {{ $.Params.featured_alt }}"/>
+</figure>
+
+{{end}}
+
+{{ .Content }}
+{{ end }}

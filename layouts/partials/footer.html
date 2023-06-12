@@ -1,0 +1,28 @@
+<footer>
+
+<div class="align-self-end container footer-info d-flex flex-direction-row justify-space-between">
+
+
+{{ $image := resources.Get .Site.Params.author_image }}
+<img src="{{ ($image.Resize "200x").RelPermalink }}" />
+
+
+
+<div>
+  <h5>{{ if isset .Params `author` }}{{ .Params.author }}{{ else }}{{ .Site.Params.author }}{{ end }}</h5>
+  <hr>
+  <p>{{ .Site.Params.long_bio }}</p>
+
+<div>
+  {{ if isset .Site.Params `email` }}<a href="mailto:{{ .Site.Params.email }}"><i class="m-2 fa fa-envelope fa-lg"></i></a>{{ end }}
+  {{ if isset .Site.Params `github` }}<a href="https://github.com/{{ .Site.Params.github }}"><i class="m-2 fa fa-github fa-lg"></i></a>{{ end }}
+  {{ if isset .Site.Params `twitter` }}<a href="{{ .Site.Params.twitter }}"><i class="m-2 fab fa-twitter fa-lg"></i></a>{{ end }}
+  {{ if isset .Site.Params `mastodon` }}<a href="{{ .Site.Params.mastodon }}"><i class="m-2 fab fa-mastodon fa-lg"></i></a>{{ end }}
+
+</div>
+</div>
+</div>
+
+{{ if isset .Site.Params `mastodon` }}<a rel="me" href="{{ .Site.Params.mastodon }}"></a>{{ end }}
+
+</footer>

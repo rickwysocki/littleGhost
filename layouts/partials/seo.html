@@ -1,0 +1,5 @@
+{{ if isset .Site.Params `author`}}<meta name="author" content="{{ if isset .Params `author` }}{{.Params.author}}{{ else }}{{ .Site.Params.author }}{{ end }}"/>{{end}}
+
+{{ if isset .Site.Params `canonical_url`}}<link rel="canonical" href="{{ .Site.Params.canonical_url }}" />{{end}}
+
+<!-- Look up hugo SEO -->

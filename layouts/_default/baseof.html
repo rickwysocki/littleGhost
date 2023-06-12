@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+
+        <div class="top container-fluid">
+          <div class="container">
+        {{- partial "nav.html" . -}}
+
+      </div>
+      </div>
+      <div class="container content">
+        {{- partial "header.html" . -}}
+
+        <div class="row align-items-start justify-content-between">
+
+        <div class="col-lg-8">
+
+
+
+          {{- block "main" . }}{{- end }}
+
+        </div>
+
+        {{- partial "bio.html" . -}}
+
+
+        </div>
+
+      </div>
+
+      {{- partial "footer.html" . -}}
+      {{- partial "script.html" . -}}
+    </body>
+</html>

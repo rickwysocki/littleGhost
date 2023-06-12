@@ -1,0 +1,47 @@
+
+{{ define "main" }}
+
+{{ template "_internal/pagination.html" . }}
+{{ range (.Paginate ( .Pages.ByDate.Reverse )).Pages }}
+
+
+
+<!--
+  {{ if isset .Params `featured_image` }}
+  <div class="post-section-image">
+      {{ $image := .Resources.GetMatch .Params.featured_image}}
+
+      <a href="{{ .RelPermalink }}"><img
+          src="{{ with $image }}{{ ($image.Fill "600x400").RelPermalink }}{{end}}"
+          alt="{{ print (.Params.featured_alt) }}"
+      /></a>
+
+      </div>
+
+    {{end}}
+
+    -->
+
+        <li class="taxonomy-list"><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+
+
+    <!--
+
+<div class="post-text-content">
+    <h3 class="post-list-title"><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{ partial "metadata.html" . }}
+    <div class="summary" href="{{ .RelPermalink }}">
+
+        <p>{{ .Summary }}</p>
+        <a class="btn btn-primary" href="{{ .RelPermalink }}">READ MORE</a>
+
+    </div>
+</div>
+
+-->
+
+
+  {{ end }}
+
+
+{{ end }}

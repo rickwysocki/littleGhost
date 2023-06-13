@@ -3,8 +3,8 @@ license = "MIT"
 licenselink = "https://github.com/rickwysocki/littleGhost/blob/main/LICENSE"
 description = "A super-simple (but extensible) Hugo theme for personal websites and portfolios"
 homepage = "https://github.com/rickwysocki/littleGhost"
-tags = [blog, portfolio]
-features = [responsive, customizable]
+tags = ["blog", "portfolio"]
+features = ["responsive", "customizable"]
 min_version = "0.41.0"
 
 [author]

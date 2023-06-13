@@ -24,18 +24,29 @@ brew install node
 Once you've got Hugo and Node installed, you can go ahead and create your site.
 
 ``` 
-hugo new site mysite
+hugo new site site_name
+```
+
+After you've done this, go ahead and add a home page. First, create a file titled _index.md in the content folder. Then, add the following front matter at the top of the page.
+
+```
+---
+title: "Home"
+layout: single
+---
 ```
 
 ## Install the Theme
 
-Navigate to your site's root directory in the terminal and use the following command to install the theme:
+Now, you can go ahead and install Little Ghost. Navigate to your site's root directory in the terminal and use the following command to install the theme:
 
 ```
 git submodule add https://github.com/rickwysocki/littleGhost.git themes/littleGhost
 ```
 
 ## Configuration
+
+Once you've got the theme installed, add the following to your config file.
 
 ```
 
@@ -62,8 +73,8 @@ theme = "littleGhost"
   # Links / Socials
   email = '#'
   github = '#'
-  # mastodon = 'https://mas.to/@rickwysocki'
-  # twitter = '' fix user name
+  # mastodon = ''
+  # twitter = '' 
   # instagram = ''
   # facebook = ''
 

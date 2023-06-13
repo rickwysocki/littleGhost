@@ -3,6 +3,30 @@ A super-simple (but extensible) Hugo template.
 
 ## Introduction
 
+Little Ghost is just a really dead-simple Hugo Theme born out of my adventures in learning Hugo. I'll be continuing to update it, but it's currently designed for a personal website / portfolio.
+
+## Prequisites
+
+In order for the theme to work, you'll need to have both Hugo and Node.JS installed. You can refer to each of their respective websites for details, but here are the basic terminal commands you'll use to install them using Homebrew. 
+
+For Hugo:
+```
+brew install hugo
+```
+
+For Node.JS
+```
+brew install node
+```
+
+## Create a Hugo Site
+
+Once you've got Hugo and Node installed, you can go ahead and create your site.
+
+``` 
+hugo new site mysite
+```
+
 ## Install the Theme
 
 Navigate to your site's root directory in the terminal and use the following command to install the theme:

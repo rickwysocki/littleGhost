@@ -7,6 +7,7 @@ $secondary: lightgrey;
 $footer-color: black;
 $footer-bg-color: lightgrey;
 $nav-item-color: black;
+$link-color: blue;
 
 
 // Import Boostrap SCSS.
@@ -97,7 +98,7 @@ figcaption {
 }
 
 a {
-  color: $secondary;
+  color: $link-color;
 }
 
  //   #FDE900, #623CEA, ##F7996E, #232020, #230C33

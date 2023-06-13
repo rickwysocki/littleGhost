@@ -114,7 +114,7 @@ Navigate to your web server in the browser and you should see your new Hugo site
 
 ## Configuring the Blog
 
-You've likely noticed that the "Posts" item in the header isn't working. It's a simple fix. Create a folder in the Content directory titled Posts. You can then go ahead and add posts there. I recommend using Hugo's page bundles, but you can also add files directly there as well. 
+You've likely noticed that the "Posts" item in the header isn't working. It's a simple fix. Create a folder in the Content directory titled posts. You can then go ahead and add posts there. I recommend using Hugo's page bundles, but you can also add files directly there as well. 
 
 ==Note: you may need to quit and restart the server in the terminal after adding the Posts folder.==
 

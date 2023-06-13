@@ -7,7 +7,7 @@ Little Ghost is just a really dead-simple Hugo Theme born out of my adventures i
 
 ## Prequisites
 
-In order for the theme to work, you'll need to have both Hugo and Node.JS installed. You can refer to each of their respective websites for details, but here are the basic terminal commands you'll use to install them using Homebrew. 
+In order for the theme to work, you'll need to have both Hugo and Node.JS installed. You can refer to each of their respective websites for details, but here are the basic terminal commands you'll use to install them using Homebrew.
 
 For Hugo:
 ```
@@ -23,7 +23,7 @@ brew install node
 
 Once you've got Hugo and Node installed, you can go ahead and create your site.
 
-``` 
+```
 hugo new site site_name
 ```
 
@@ -40,7 +40,7 @@ layout: single
 
 Now, you can go ahead and install Little Ghost. Navigate to your site's root directory in the terminal and initiate a .git file:
 
-``` 
+```
 git init
 
 ```
@@ -73,14 +73,14 @@ theme = "littleGhost"
   # SEO
   description = ''
   site_image = 'images/ghost.png' # Add site-wide featured image here.
-  author_image = 'images/ghost.png' # Used for main author bio card.
+  author_image = 'images/author.jpeg' # Used for main author bio card.
   nav_logo = 'images/ghost.png' # Icon included in nav-bar.
 
   # Links / Socials
   email = '#'
   github = '#'
   # mastodon = ''
-  # twitter = '' 
+  # twitter = ''
   # instagram = ''
   # facebook = ''
 
@@ -102,7 +102,7 @@ theme = "littleGhost"
 
 ```
 
-You can go ahead and update the params under "Site info," "SEO," and "Links / Socials." 
+You can go ahead and update the params under "Site info," "SEO," and "Links / Socials."
 
 At this point, things should be up and running. To see your site, go the terminal and input:
 
@@ -114,7 +114,7 @@ Navigate to your web server in the browser and you should see your new Hugo site
 
 ## Configuring the Blog
 
-You've likely noticed that the "Posts" item in the header isn't working. It's a simple fix. Create a folder in the Content directory titled posts. You can then go ahead and add posts there. I recommend using Hugo's page bundles, but you can also add files directly there as well. 
+You've likely noticed that the "Posts" item in the header isn't working. It's a simple fix. Create a folder in the Content directory titled posts. You can then go ahead and add posts there. I recommend using Hugo's page bundles, but you can also add files directly there as well.
 
 ==Note: you may need to quit and restart the server in the terminal after adding the Posts folder.==
 
@@ -126,7 +126,7 @@ title:  "Title"
 date:   2023-03-10 16:08:22 -0500
 summary: # A description of the post that will show up when the posts are listed.
 description: # Used for SEO. If left blank, the description in your config file is pulled in.
-featured_image: featured.png # This works as a featured image for the post. Note that the title must be featured before the file type. 
+featured_image: featured.png # This works as a featured image for the post. Note that the title must be featured before the file type.
 featured_alt: # Include alt text and include more readers.
 layout: post
 ---
@@ -134,4 +134,4 @@ layout: post
 
 ## Customizing the Styles
 
-At the top of themes/littleGhost/assets/custom.scss, there are some variables you can tweak to change the color scheme. All of my custom styles are in that same file, so go ahead and tweak at your leisure. 
+At the top of themes/littleGhost/assets/custom.scss, there are some variables you can tweak to change the color scheme. All of my custom styles are in that same file, so go ahead and tweak at your leisure.

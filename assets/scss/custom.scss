@@ -2,10 +2,11 @@
 
 // color pallete: #FDE900, #623CEA, #F7996E, #232020, #230C33
 
-$primary: #232020;
-$secondary: blue;
-$footer-color: #F2EFEA;
-$footer-bg-color: blue;
+$primary: black;
+$secondary: lightgrey;
+$footer-color: black;
+$footer-bg-color: lightgrey;
+$nav-item-color: black;
 
 
 // Import Boostrap SCSS.
@@ -19,8 +20,7 @@ $footer-bg-color: blue;
 }
 
 .nav-item a {
-  color: #F2EFEA;
-
+  color: $nav-item-color;
 }
 
 .page-title {
@@ -34,8 +34,6 @@ html {
 
 .top {
   background-color: $secondary;
-  border-bottom: 1px solid $primary;
-
 }
 
 hr {
@@ -108,7 +106,6 @@ footer {
   background-color: $footer-bg-color;
   width: 100%;
   color: $footer-color;
-  border-top: 1px solid $primary;
 }
 
 footer h5 {

@@ -38,7 +38,14 @@ layout: single
 
 ## Install the Theme
 
-Now, you can go ahead and install Little Ghost. Navigate to your site's root directory in the terminal and use the following command to install the theme:
+Now, you can go ahead and install Little Ghost. Navigate to your site's root directory in the terminal and initiate a .git file:
+
+``` 
+git init
+
+```
+
+Then, you can add the theme using the following command:
 
 ```
 git submodule add https://github.com/rickwysocki/littleGhost.git themes/littleGhost

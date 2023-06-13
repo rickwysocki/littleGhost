@@ -75,7 +75,6 @@ theme = "littleGhost"
   site_image = 'images/ghost.png' # Add site-wide featured image here.
   author_image = 'images/ghost.png' # Used for main author bio card.
   nav_logo = 'images/ghost.png' # Icon included in nav-bar.
-  # canonical_url = 'https://url.com'
 
   # Links / Socials
   email = '#'
@@ -101,5 +100,38 @@ theme = "littleGhost"
 [taxonomies]
   tag = "tags"
 
+```
+
+You can go ahead and update the params under "Site info," "SEO," and "Links / Socials." 
+
+At this point, things should be up and running. To see your site, go the terminal and input:
 
 ```
+hugo serve
+```
+
+Navigate to your web server in the browser and you should see your new Hugo site.
+
+## Configuring the Blog
+
+You've likely noticed that the "Posts" item in the header isn't working. It's a simple fix. Create a folder in the Content directory titled Posts. You can then go ahead and add posts there. I recommend using Hugo's page bundles, but you can also add files directly there as well. 
+
+==Note: you may need to quit and restart the server in the terminal after adding the Posts folder.==
+
+The following front matter can be added to blog posts.
+
+```
+---
+title:  "Title"
+date:   2023-03-10 16:08:22 -0500
+summary: # A description of the post that will show up when the posts are listed.
+description: # Used for SEO. If left blank, the description in your config file is pulled in.
+featured_image: featured.png # This works as a featured image for the post. Note that the title must be featured before the file type. 
+featured_alt: # Include alt text and include more readers.
+layout: post
+---
+```
+
+## Customizing the Styles
+
+At the top of themes/littleGhost/assets/custom.scss, there are some variables you can tweak to change the color scheme. All of my custom styles are in that same file, so go ahead and tweak at your leisure. 

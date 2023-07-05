@@ -1,0 +1,75 @@
+{{ define "main" }}
+
+
+{{ if .Params.project_info }}
+<div class="grid xl:grid-cols-3 grid-cols-1 ">
+  {{ end }}
+
+    {{ if .Params.project_info }}
+
+    <aside class="p-6 shadow-lg max-w-sm h-fit justify-self-center mt-20 xl:order-first order-last">
+      {{ $image := .Resources.GetMatch .Params.featured_image }}
+      <img
+        {{ with $image }}src="{{ ($image.Crop "1200x800").Permalink }}"{{ end }}
+        alt="{{ .Params.featured_alt }}"
+
+      />
+
+      <h1 class="font-bold text-xl mt-2">Project Info</h1>
+      <p class="mb-4">{{ .Params.summary }}</p>
+      <p class="font-bold">Skills I used in this project include:</p>
+        <ul class="mt-0">
+        {{range .Params.skills }}
+          <li><a href="/skills/{{ . | urlize }}">{{ . }}</a></li>
+        {{ end }}
+        </ul>
+
+    </aside>
+
+    {{ end }}
+
+    <section class="mx-auto mt-8 justify-self-center ">
+      <div class="prose text-lg prose-a:text-indigo-600 prose-a:font-bold leading-7 mx-auto mt-8">
+
+        <h1>{{ .Title }}</h1>
+        {{ if isset .Params "featured_image" }}
+
+        {{ $image := .Resources.GetMatch .Params.featured_image }}
+        <img
+            {{ with $image }}src="{{$image.Permalink }}"{{end}}
+            alt="{{ .Params.featured_alt }}"
+        />
+
+        {{ end }}
+
+        <div class="flex flex-row gap-4 items-center">
+          <i class="fa fa-at"></i>
+          <p class="my-0 text-gray-600">{{ .Site.Params.author}}</p>
+        </div>
+        {{ if isset .Params "date"}}
+        <div class="flex flex-row gap-4 items-center">
+          <i class="fa fa-calendar"></i>
+          <p class="my-0 text-gray-600">{{ .Date | time.Format ":date_long" }}</p>
+        </div>
+        {{ end }}
+        <div class="flex flex-row gap-4 items-center">
+          {{ with .Params.tags }}
+          <i class="fa fa-tag"></i>
+          {{ end }}
+          {{ range .Params.tags }}
+            <a class="my-0 text-gray-600" href="tags/{{ . | urlize }}">{{ . }}</a>
+          {{ end }}
+        </div>
+
+
+        {{ .Content }}
+
+    </div>
+    </section>
+  </div>
+
+
+
+
+
+{{ end }}

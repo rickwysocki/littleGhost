@@ -1,0 +1,58 @@
+baseURL = ""
+languageCode = 'en-us'
+title = ''
+theme = ["littleGhost"]
+enableInlineShortcodes = true
+
+[params]
+
+  # Site info
+  author = 'Author'
+  author_bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  long_bio = "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  tagline = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  # SEO
+  description = 'Site description.'
+
+  # Images
+  site_image = 'images/ghost.png' # Add site-wide featured image here.
+  author_image = 'images/ghost.png' # Used for main author bio card.
+  nav_logo = 'images/ghost.png' # Icon included in nav-bar.
+  post_image = 'images/ghost-post-image.png'
+  post_image_alt = 'Little Ghost logo.'
+
+
+  # Links / Socials
+  email = '#'
+  github = '#'
+  mastodon = '#'
+  twitter = '#'
+  # instagram = ''
+  # facebook = ''
+
+pluralizeListTitles = false
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+      name = "Portfolio"
+      url = "/portfolio/"
+      weight = 3
+
+
+[taxonomies]
+  tag = "tags"
+  course = 'courses'
+  category = 'categories'
+
+
+[permalinks]
+  posts = '/posts/:year/:month/:title/'
+  categories = '/:title/'

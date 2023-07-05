@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+{{- partial "head.html" . -}}
+
+<body class="p-4">
+
+
+  {{- partial "nav.html" . -}}
+
+  {{ if .Params.site_header }}
+
+    {{- partial "header.html" . -}}
+
+  {{ end }}
+
+
+  <div class="mx-auto">
+
+
+
+
+
+        {{ block "main" . }}
+          <!-- The part of the page that begins to differ between templates -->
+        {{ end }}
+
+
+
+
+
+    {{- partial "featured-posts.html" . -}}
+
+
+
+
+    {{- partial "footer.html" . -}}
+  </div>
+
+
+
+
+</body>
+</html>

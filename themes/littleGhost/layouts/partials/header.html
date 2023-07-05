@@ -1,0 +1,22 @@
+<header class="flex-column justify-center">
+
+  <div class="mx-auto mt-4 text-center text-underline rounded-xl shadow-lg p-8 max-w-xs">
+  <h1 class="text-2xl font-bold text-indigo-600">{{ .Site.Params.author }}</h1>
+  {{ $image := resources.Get .Site.Params.author_image }}
+  <img class= "my-4 mx-auto h-20 rounded-full" src="{{ $image.RelPermalink }}" alt="Author image."/>
+  <p class="text-lg">{{ .Site.Params.tagline }}</p>
+  <hr class="w-16 mx-auto my-5 border-indigo-600">
+  <div class="flex gap-4 justify-center mt-2 text-xl text-indigo-600">
+    {{ if isset .Site.Params `email` }}<a href="mailto:{{ .Site.Params.email }}"><i class="fa fa-envelope"></i></a>{{ end }}
+    {{ if isset .Site.Params `github` }}<a href="https://github.com/{{ .Site.Params.github }}"><i class="fa fa-github"></i></a>{{ end }}
+    {{ if isset .Site.Params `twitter` }}<a href="{{ .Site.Params.twitter }}"><i class="fab fa-twitter"></i></a>{{ end }}
+    {{ if isset .Site.Params `mastodon` }}<a href="{{ .Site.Params.mastodon }}"><i class="fab fa-mastodon"></i></a>{{ end }}
+
+
+</div>
+
+
+</div>
+
+
+</header>

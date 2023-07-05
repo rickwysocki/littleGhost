@@ -1,0 +1,18 @@
+<footer class="mx-auto shadow-lg max-w-lg p-6 text-center sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6 mt-16 mb-4">
+    {{ $image := resources.Get .Site.Params.author_image }}
+    <img class= "sm:mx-0 sm:shrink-0 mx-auto h-24 rounded-full" src="{{ $image.RelPermalink }}" alt="Author image."/>
+    <div class="text-left">
+      <h6 class="font-bold text-indigo-600">{{ .Site.Params.author }}</h6>
+      <p class="text-gray-600">{{ .Site.Params.tagline }}</p>
+      <p>{{ .Site.Params.long_bio }}</p>
+      <div class="flex gap-4 mt-2 text-xl text-indigo-600">
+        {{ if isset .Site.Params `email` }}<a href="mailto:{{ .Site.Params.email }}"><i class="fa fa-envelope"></i></a>{{ end }}
+        {{ if isset .Site.Params `github` }}<a href="https://github.com/{{ .Site.Params.github }}"><i class="fa fa-github"></i></a>{{ end }}
+        {{ if isset .Site.Params `twitter` }}<a href="{{ .Site.Params.twitter }}"><i class="fab fa-twitter"></i></a>{{ end }}
+        {{ if isset .Site.Params `mastodon` }}<a href="{{ .Site.Params.mastodon }}"><i class="fab fa-mastodon"></i></a>{{ end }}
+
+
+    </div>
+    </div>
+
+</footer>

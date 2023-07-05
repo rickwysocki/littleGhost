@@ -1,0 +1,22 @@
+<div class="metadata">
+
+{{ $dateTime := .PublishDate.Format "2006-01-02" }}
+{{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+
+{{ if isset .Params `date` }}
+<div>
+<i class="fa fa-calendar"></i>
+<time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+</div>
+{{ end }}
+{{ with .Params.tags }}
+<div>
+<i class="fa fa-tag"></i>
+{{ range . }}
+{{ $href := print (absURL "tags/") (urlize .) }}
+<a class="btn btn-sm btn-outline-dark tag-btn" href="{{ $href }}">{{ . }}</a>
+{{ end }}
+</div>
+{{ end }}
+
+</div>

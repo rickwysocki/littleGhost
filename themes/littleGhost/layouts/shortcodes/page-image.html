@@ -1,0 +1,5 @@
+{{ $image := .Page.Resources.GetMatch (.Get "source") }}
+<figure>
+  <img src="{{ ($image.Resize "1000x").RelPermalink }}" {{with .Get "alt"}}alt="{{.}}"{{else}}alt=""{{end}} >
+  {{with .Get "caption"}}<figcaption>{{.}}</figcaption>{{end}}
+</figure>

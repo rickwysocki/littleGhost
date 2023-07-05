@@ -1,4 +1,4 @@
-# Little Ghost - Hugo Theme
+ng point want to do extensive design wor# Little Ghost - Hugo Theme
 
 Little Ghost is a simple but extensible Hugo theme built with Tailwind.css. It is primarily designed for blogs and portfolio websites. I designed it to give folks an easy and aesthetically pleasing kick-start to their Hugo sites.
 
@@ -57,12 +57,12 @@ Finally, you'll run a Node script that will build your site from the Tailwind fi
 Run npm-build-tw.
 ```
 
-If you want to do extensive design work using Little Ghost as a starting point, I recommend the following.
+I recommend the following if you want to do more extensive editing of theme layouts:
 
 1. Navigate to your theme folder in a separate command-line window.
 2. Run npx tailwindcss -i ./assets/main.css -o ./assets/style.css --watch`
 
-This will automatically re-build your site any time you make changes.
+This will automatically rebuild your site any time you make changes.
 
 ### Configuring Your Site
 
@@ -133,11 +133,11 @@ pluralizeListTitles = false
 
 At this point, you're ready to create your first page. Create a file titled _index.md in your content directory and add the following front matter:
 
-`
+```
 title: Home
 layout: single
 site_header: true
-`
+```
 
 
 ### View Your Site

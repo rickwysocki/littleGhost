@@ -64,7 +64,7 @@ I recommend the following if you want to do more extensive editing of theme layo
 
 This will automatically rebuild your site any time you make changes.
 
-### Configuring Your Site
+## Configuring Your Site
 
 Your site won't work quite yet. First, you'll need to add some information to your config.toml file. Note that you should add this to _your_ config file in the root directory of your Hugo site, not to the theme.toml file included in the Little Ghost Theme files.
 
@@ -149,3 +149,123 @@ hugo serve
 ```
 
 You should see your site using the server link given to you.
+
+## Page Layout and Front Matter Options
+
+There are two types of page layouts you can call on in front matter: single and project-page.
+
+### Single Layout
+
+Single layouts are simple. Because Hugo generally is agnostic to the difference between posts and pages, you can use the single layout for essentially any content you create.
+
+There are a number of different front matter variables you can use for pages in Little Ghost. Here's an example of front matter for a blog post:
+
+```
+---
+layout: single
+title:  "What is New About New Media?"
+date:   2021-11-16 11:34:22 -0500
+tags:
+  - Media Studies
+summary: New media are better defined as media that challenge our existing conceptions of technology... even if the new media in question might be old.
+published: true
+featured_image: featured.jpg
+featured_alt: A roll of camera film.
+---
+```
+
+Note that the of the display of most of these parameters on the site depends on them being configured in the front matter for a page. A date, for example, is not necessary--you can safely remove that for undated pages.
+
+### Project-page Layout
+
+Project-page layouts are almost identical to single page layouts. The only difference is that project-page layouts allow you to include an optional "Project Info" aside that details information about a project and skills you demonstrate in it. This is meant to be useful on pages where the main column might be used to display work, such as a gallery.
+
+Here is an example of front matter for a project-page.
+
+```
+---
+title: "Making Future Matters"
+layout: portfolio-page
+summary: I co-edited and designed an experimental, born-digital edited collection of writing studies scholarship.
+project_info: true
+featured_image: featured.png
+featured_alt: Making Future Matters logo.
+skills:
+  - Web Design
+  - Adobe InDesign
+  - HTML5 / CSS
+  - Javascript
+  - Project Management
+  - Editorial Work
+  - Adobe Premiere
+---
+```
+
+### Site Header
+
+On any page, you have the option to include a site header that will display your main image, tagline, and links that you've set up in the config file. You can include this on a page by adding the following to your front matter:
+
+```
+site_header: true
+```
+
+I recommend using this, at least, on your home page.
+
+### Working with Images
+
+You can always call a `featured_image:` parameter on any content page you create, as well as a `featured_alt:` parameter describing the image for accessibility. You've seen an example of this above:
+
+```
+featured_image: featured.png
+featured_alt: Making Future Matters logo.
+```
+
+I recommend including images for any page in a Hugo page bundle for the most seamless experience. Any image called as the `featured_image` in the front matter will show up on top of the page and on any list pages including your page. For any other images, I recommend using the standard Hugo figure shortcode.
+
+### Standard Navigation
+
+Little Ghost comes out of the box with three pages in the navigation:
+
+- A Home page. This will display the _index.md file in your content directory that you created above.
+- A Posts page. This is your blog. To use it, create a posts/ folder in your content directory and place content there.
+- A portfolio page. This page will usefully display any page that has `category: portfolio` included in the front matter, giving you an easy way to offer a sample of your work to site visitors.
+
+You can add any other pages to the site navigation in your config file. For example:
+
+```
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+      name = "Portfolio"
+      url = "/portfolio/"
+      weight = 3
+  [[menu.main]] # This page has been added to the navigation.
+      name = "Research"
+      url = "/research/"
+      weight = 4
+```
+
+### Featured
+
+Besides "portfolio," there is one other category that you can easily make use of in Little Ghost that allows you to create featured content that you would like viewers to pay particular attention to. This takes two steps.
+
+#### Add Featured Content Categories to Front Matter
+
+The first thing you'll want to do is add `featured_post: true` to any content you want to feature. Note that this will apply to _any_ page, not just posts, despite the name.
+
+#### Add Featured Content to Pages
+
+You can decide which pages you want to add a featured content box to. For example, you could just include it on the home page for new visitors. To display featured content, simply add the following to your front matter:
+
+```
+featured_grid: true
+```
+
+Note that the grid will always display two posts in a row when the screen is wide enough, so I recommend keeping your featured content to multiples of two for aesthetic purposes.

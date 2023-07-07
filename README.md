@@ -4,7 +4,7 @@ Little Ghost is a simple but extensible Hugo theme built with Tailwind.css. It i
 
 ## Installing littleGhost
 
-### Prequisites
+### Prerequisites
 
 To use Little Ghost, you'll need to have Node.js, Node Package Manager, and Hugo installed on your machine. Here are links to the relevant documentation:
 - [Node.js](https://nodejs.org/en)

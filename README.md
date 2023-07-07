@@ -213,7 +213,7 @@ I recommend using this, at least, on your home page.
 
 ### Working with Images
 
-You can always call a `featured_image:` parameter on any content page you create, as well as a `featured_alt:` parameter describing the image for accessibility. You've seen an example of this above:
+You can call a `featured_image:` parameter on any content page you create, as well as a `featured_alt:` parameter describing the image for accessibility. You've seen an example of this above:
 
 ```
 featured_image: featured.png

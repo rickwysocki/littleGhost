@@ -185,7 +185,7 @@ Here is an example of front matter for a project-page.
 ```
 ---
 title: "Making Future Matters"
-layout: portfolio-page
+layout: project-page
 summary: I co-edited and designed an experimental, born-digital edited collection of writing studies scholarship.
 project_info: true
 featured_image: featured.png

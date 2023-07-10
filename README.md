@@ -54,7 +54,7 @@ npm init -y
 Finally, you'll run a Node script that will build your site from the Tailwind files. You'll need to run this script to update your site any time you change Tailwind-related content in layout files.
 
 ```
-Run npm-build-tw.
+Run npm-build-tw
 ```
 
 I recommend the following if you want to do more extensive editing of theme layouts:

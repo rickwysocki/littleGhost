@@ -1,6 +1,6 @@
 # Little Ghost - Hugo Theme
 
-Little Ghost is a simple but extensible Hugo theme built with Tailwind.css. It is primarily designed for blogs and portfolio websites. I designed it to give folks an easy and aesthetically pleasing kick-start to their Hugo sites.
+Little Ghost is a simple but extensible [Hugo](https://gohugo.io) theme built with [Tailwind CSS](https://tailwindcss.com). It is primarily designed for blogs and portfolio websites. I designed it to give folks an easy and aesthetically pleasing kick-start to their Hugo sites.
 
 ## Installing littleGhost
 

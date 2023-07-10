@@ -220,15 +220,15 @@ featured_image: featured.png
 featured_alt: Making Future Matters logo.
 ```
 
-I recommend including images for any page in a Hugo page bundle for the most seamless experience. Any image called as the `featured_image` in the front matter will show up on top of the page and on any list pages including your page. For any other images, I recommend using the standard Hugo figure shortcode.
+I recommend including images using [Hugo page bundles](https://gohugo.io/content-management/page-bundles/) for the most seamless experience. A `featured_image` assigned in the front matter will display at the top of the page as well as on list pages. For additional images, I recommend using the standard [Hugo figure shortcode](https://gohugo.io/content-management/shortcodes/).
 
-### Standard Navigation
+### Navigation
 
 Little Ghost comes out of the box with three pages in the navigation:
 
-- A Home page. This will display the _index.md file in your content directory that you created above.
+- A Home page. This will display the _index.md file in the content directory that you created above.
 - A Posts page. This is your blog. To use it, create a posts/ folder in your content directory and place content there.
-- A portfolio page. This page will usefully display any page that has `category: portfolio` included in the front matter, giving you an easy way to offer a sample of your work to site visitors.
+- A portfolio page. This page will usefully display any page that has `category: portfolio` included in the front matter, giving you an easy way to offer a sample of your work to visitors.
 
 You can add any other pages to the site navigation in your config file. For example:
 
@@ -254,18 +254,18 @@ You can add any other pages to the site navigation in your config file. For exam
 
 ### Featured
 
-Besides "portfolio," there is one other category that you can easily make use of in Little Ghost that allows you to create featured content that you would like viewers to pay particular attention to. This takes two steps.
+Besides "portfolio," there is one other category that allows you to create featured content, which can be displayed on any page. This takes two steps.
 
 #### Add Featured Content Categories to Front Matter
 
-The first thing you'll want to do is add `featured_post: true` to any content you want to feature. Note that this will apply to _any_ page, not just posts, despite the name.
+First, add `featured_post: true` to any content you want to feature. Note that this will apply to _any_ page, not just posts, despite the name.
 
 #### Add Featured Content to Pages
 
-You can decide which pages you want to add a featured content box to. For example, you could just include it on the home page for new visitors. To display featured content, simply add the following to your front matter:
+You can decide which pages will display featured content. For example, you could just include it on the home page for new visitors. To display featured content, simply add the following to a page's front matter:
 
 ```
 featured_grid: true
 ```
 
-Note that the grid will always display two posts in a row when the screen is wide enough, so I recommend keeping your featured content to multiples of two for aesthetic purposes.
+Note that the grid will always display a maximum of two pages per row, so I recommend keeping your featured content to multiples of two for aesthetic purposes.

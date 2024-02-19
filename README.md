@@ -54,7 +54,7 @@ npm init -y
 Finally, you'll run a Node script that will build your site from the Tailwind files. You'll need to run this script to update your site any time you change Tailwind-related content in layout files.
 
 ```
-Run npm-build-tw
+npm run build-tw
 ```
 
 I recommend the following if you want to do more extensive editing of theme layouts:
@@ -131,14 +131,19 @@ pluralizeListTitles = false
 
 ### Create Your First Page.
 
-At this point, you're ready to create your first page. Create a file titled _index.md in your content directory and add the following front matter:
+At this point, you're ready to create your first page. Follow these steps:
+
+1. Navigate back to your root project directory in your command-line interface.
+2. Create a file titled _index.md **in your content directory**.
+3.  Add the following front matter:
 
 ```
+---
 title: Home
 layout: single
 site_header: true
+---
 ```
-
 
 ### View Your Site
 
@@ -228,7 +233,7 @@ Little Ghost comes out of the box with three pages in the navigation:
 
 - A Home page. This will display the _index.md file in the content directory that you created above.
 - A Posts page. This is your blog. To use it, create a posts/ folder in your content directory and place content there.
-- A portfolio page. This page will usefully display any page that has `category: portfolio` included in the front matter, giving you an easy way to offer a sample of your work to visitors.
+- A Portfolio page. This page will usefully display any page that has `category: portfolio` included in the front matter, giving you an easy way to offer a sample of your work to visitors.
 
 You can add any other pages to the site navigation in your config file. For example:
 

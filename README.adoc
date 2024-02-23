@@ -8,6 +8,7 @@ Rick Wysocki <rlwysockijr@gmail.com>
 :icons: image
 :iconsdir: icons
 ifdef::env-github[]
+:imagesdir: assets/images
 :tip-caption: :bulb:
 :note-caption: :information_source:
 :important-caption: :heavy_exclamation_mark:

@@ -344,17 +344,16 @@ Note that the grid will always display a maximum of two pages per row, so I reco
 |```layout: single```, ```layout: portfolio-page```
 
 |title
-|'''title:  "Ted Nelson's Evolutionary List File and Information Management"'''
+|```title:  "Ted Nelson's Evolutionary List File and Information Management"```
 
 |date
 |```2023-07-15 12:41:22 -0500```
 
 |tags
-|```tags:
-
+|``
+tags:
   - Media Studies
-
-  ```
+```
 
 |summary
 |```In 1965, Ted Nelson theorized the Evolutionary List File and offered clear insights into the relationship between technology and creativity that are still relevant today.```

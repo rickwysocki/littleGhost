@@ -337,7 +337,7 @@ Note that the grid will always display a maximum of two pages per row, so I reco
 
 == Front Matter Options
 
-[cols="1,1"]
+[cols="1,1, 1"]
 |===
 |Cell in column 1, header row |Cell in column 2, header row 
 
@@ -345,38 +345,48 @@ Note that the grid will always display a maximum of two pages per row, so I reco
 |```layout: single```, ```layout: portfolio-page```
 
 |title
-|Cell in column 2, row 2
+|'''title: title:  "Ted Nelson's Evolutionary List File and Information Management"'''
 
 |date
-|Cell in column 2, row 3 
+|```2023-07-15 12:41:22 -0500```
 
 |tags
-|Cell in column 2, row 3 
+|```tags:
+  - Media Studies
+  ```
 
 |summary
-|Cell in column 2, row 3 
+|```In 1965, Ted Nelson theorized the Evolutionary List File and offered clear insights into the relationship between technology and creativity that are still relevant today.```
 
 |published
-|Cell in column 2, row 3 
+|```published: true```, ```published: false```
 
 |featured_image
-|Cell in column 2, row 3 
+|```featured_image: featured.jpg```
 
 |project_info
-|Cell in column 2, row 3 
+|```project_info: true``` 
 
 |skills
-|Cell in column 2, row 3 
+|```skills:
+  - Web Design
+  - Adobe InDesign
+  - HTML5 / CSS
+  - Javascript
+  - Project Management
+  - Editorial Work
+  - Adobe Premiere
+  ```
 
 |site_header
-|Cell in column 2, row 3 
+|```site_header: true```, ```site_header_false```
 
 |featured_grid
-|Cell in column 2, row 3 
+|```featured_grid: true```, ```featured_grid: false```
 
 |featured_post
-|Cell in column 2, row 3 
+|```featured_post: true```, ```featured_post: false```
 
 |featured_alt
-|Cell in column 2, row 3 
+|```featured_alt: An image from the film Men of Harper, looking scared, in a tunnel.```
 |=== 

@@ -370,7 +370,14 @@ tags:
 |```In 1965, Ted Nelson theorized the Evolutionary List File and offered clear insights into the relationship between technology and creativity that are still relevant today.```
 
 |published
-|```published: true```, ```published: false```
+a| 
+[source, yaml]
+----
+published: true
+----,
+----
+published: false```
+----
 
 |featured_image
 |```featured_image: featured.jpg```

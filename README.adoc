@@ -337,7 +337,7 @@ Note that the grid will always display a maximum of two pages per row, so I reco
 
 == Front Matter Options
 
-[cols="1,1,"]
+[cols="1,1"]
 |===
 
 |layout

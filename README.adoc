@@ -337,7 +337,7 @@ Note that the grid will always display a maximum of two pages per row, so I reco
 
 == Front Matter Options
 
-[cols="a,a"]
+[cols="1,1"]
 |===
 
 |layout
@@ -350,7 +350,7 @@ Note that the grid will always display a maximum of two pages per row, so I reco
 |```2023-07-15 12:41:22 -0500```
 
 |tags
-|
+a|
 [source, yaml]
 ----
 tags:

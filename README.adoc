@@ -352,7 +352,9 @@ Note that the grid will always display a maximum of two pages per row, so I reco
 |tags
 |```
 tags:
+
   - Media Studies
+  
 ```
 
 |summary

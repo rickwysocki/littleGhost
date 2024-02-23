@@ -337,7 +337,7 @@ Note that the grid will always display a maximum of two pages per row, so I reco
 
 == Front Matter Options
 
-[cols="1,1"]
+[cols="a,a"]
 |===
 
 |layout
@@ -350,10 +350,13 @@ Note that the grid will always display a maximum of two pages per row, so I reco
 |```2023-07-15 12:41:22 -0500```
 
 |tags
-|tags:
+|
+[source, yaml]
+----
+tags:
 
   - Media Studies
-
+----
 |summary
 |```In 1965, Ted Nelson theorized the Evolutionary List File and offered clear insights into the relationship between technology and creativity that are still relevant today.```
 

@@ -375,8 +375,9 @@ a|
 ----
 published: true
 ----,
+[source, yaml]
 ----
-published: false```
+published: false
 ----
 
 |featured_image

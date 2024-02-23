@@ -350,13 +350,29 @@ Note that the grid will always display a maximum of two pages per row, so I reco
 |===
 
 |layout
-|```layout: single```, ```layout: portfolio-page```
+a|
+[source, yaml]
+----
+layout: single
+----
+[source, yaml]
+----
+layout: portfolio-page
+----
 
 |title
-|```title:  "Ted Nelson's Evolutionary List File and Information Management"```
+a|
+[source, yaml]
+----
+title:  "Ted Nelson's Evolutionary List File and Information Management"```
+----
 
 |date
-|```2023-07-15 12:41:22 -0500```
+a|
+[source, yaml]
+----
+date: 2023-07-15 12:41:22 -0500
+----
 
 |tags
 a|
@@ -366,8 +382,13 @@ tags:
 
   - Media Studies
 ----
+
 |summary
-|```In 1965, Ted Nelson theorized the Evolutionary List File and offered clear insights into the relationship between technology and creativity that are still relevant today.```
+a|
+[source, yaml]
+----
+In 1965, Ted Nelson theorized the Evolutionary List File and offered clear insights into the relationship between technology and creativity that are still relevant today.```
+----
 
 |published
 a| 
@@ -382,13 +403,24 @@ published: false
 ----
 
 |featured_image
-|```featured_image: featured.jpg```
+a|
+[source, yaml]
+----
+featured_image: featured.jpg
+----
 
 |project_info
-|```project_info: true``` 
+a|
+[source, yaml]
+----
+project_info: true
+----
 
 |skills
-|```skills:
+a|
+[source, yaml]
+----
+skills:
 
   - Web Design
   - Adobe InDesign
@@ -397,18 +429,48 @@ published: false
   - Project Management
   - Editorial Work
   - Adobe Premiere
-
-  ```
+----
 
 |site_header
-|```site_header: true```, ```site_header_false```
+a|
+[source, yaml]
+----
+site_header: true
+----
+
+[source, yaml]
+----
+site_header: false
+----
 
 |featured_grid
-|```featured_grid: true```, ```featured_grid: false```
+a|
+[source, yaml]
+----
+featured_grid: true
+----
+
+[source, yaml]
+----
+featured_grid: false
+----
 
 |featured_post
-|```featured_post: true```, ```featured_post: false```
+a|
+[source, yaml]
+----
+featured_post: true
+----
+
+[source, yaml]
+----
+featured_post: false
+----
 
 |featured_alt
-|```featured_alt: An image from the film Men of Harper, looking scared, in a tunnel.```
+a|
+[source, yaml]
+----
+featured_alt: An image from the film Men of Harper, looking scared, in a tunnel.
+----
 |=== 

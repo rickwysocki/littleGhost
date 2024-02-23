@@ -374,7 +374,8 @@ a|
 [source, yaml]
 ----
 published: true
-----,
+----
+
 [source, yaml]
 ----
 published: false

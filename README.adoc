@@ -119,7 +119,9 @@ This will rebuild your CSS automatically any time you make changes.
 
 You need to add some content to your ```config.toml``` file before your site will run.
 
-```
+
+[source, yaml]
+----
 baseURL = ""
 languageCode = 'en-us'
 title = ''
@@ -178,7 +180,7 @@ pluralizeListTitles = false
 [permalinks]
   posts = '/posts/:year/:month/:title/'
   categories = '/:title/'
-```
+----
 
 IMPORTANT: Add this code to the ```config.toml``` in the root directory of your project, **not** the configuration file in the Little Ghost theme folder. 
 
@@ -190,13 +192,14 @@ You're ready to create your first page. Follow these steps:
 2. Create a file titled _index.md **in your content directory**.
 3. Add the following front matter:
 
-```
+[source, yaml]
+----
 ---
 title: Home
 layout: single
 site_header: true
 ---
-```
+----
 
 Feel free to add any text below the front matter before you move on. This text will display on your homepage. 
 
@@ -225,7 +228,8 @@ Single layouts are simple. Because Hugo is agnostic to the difference between po
 
 There are a number of different front matter variables you can use for pages in Little Ghost. Here's an example of front matter for a blog post:
 
-```
+[source, yaml]
+----
 ---
 layout: single
 title:  "What is New About New Media?"
@@ -237,7 +241,7 @@ published: true
 featured_image: featured.jpg
 featured_alt: A roll of camera film.
 ---
-```
+----
 
 Note that these parameters usually depend you configuring them in the front matter for a page. They are not always required in every context. A date, for example, is not necessary--you can safely remove that for undated pages.
 
@@ -247,7 +251,8 @@ Project-page layouts are almost identical to single page layouts. The only diffe
 
 Here is an example of front matter for a project-page.
 
-```
+[source, yaml]
+----
 ---
 title: "Making Future Matters"
 layout: project-page
@@ -264,15 +269,16 @@ skills:
   - Editorial Work
   - Adobe Premiere
 ---
-```
+----
 
 === Site Header
 
 On any page, you have the option to include a site header that will display your main image, tagline, and links that you've set up in the config file. You can include this on a page by adding the following to your front matter:
 
-```
+[source, yaml]
+----
 site_header: true
-```
+----
 
 I recommend using this, at least, on your home page.
 
@@ -280,10 +286,11 @@ I recommend using this, at least, on your home page.
 
 You can call a `featured_image:` parameter on any content page you create, as well as a `featured_alt:` parameter describing the image for accessibility. You've seen an example of this above:
 
-```
+[source, yaml]
+----
 featured_image: featured.png
 featured_alt: Making Future Matters logo.
-```
+----
 
 I recommend including images using [Hugo page bundles](https://gohugo.io/content-management/page-bundles/) for the most seamless experience. A `featured_image` assigned in the front matter will display at the top of the page as well as on list pages. For additional images, I recommend using the standard [Hugo figure shortcode](https://gohugo.io/content-management/shortcodes/).
 
@@ -297,7 +304,8 @@ Little Ghost comes out of the box with three pages in the navigation:
 
 You can add any other pages to the site navigation in your config file. For example:
 
-```
+[source, yaml]
+----
 [menu]
   [[menu.main]]
     name = "Home"
@@ -315,11 +323,11 @@ You can add any other pages to the site navigation in your config file. For exam
       name = "Research"
       url = "/research/"
       weight = 4
-```
+----
 
 === Featured
 
-Besides "portfolio," there is one other category that allows you to create featured content, which can be displayed on any page. This takes two steps.
+Little Ghost has an additional function that allows you to create featured content, which can be displayed on any page. This takes two steps.
 
 ==== Add Featured Content Categories to Front Matter
 
@@ -329,9 +337,10 @@ First, add `featured_post: true` to any content you want to feature. Note that t
 
 You can decide which pages will display featured content. For example, you could just include it on the home page for new visitors. To display featured content, simply add the following to a page's front matter:
 
-```
+[source, yaml]
+----
 featured_grid: true
-```
+----
 
 Note that the grid will always display a maximum of two pages per row, so I recommend keeping your featured content to multiples of two for aesthetic purposes.
 

@@ -339,20 +339,21 @@ Note that the grid will always display a maximum of two pages per row, so I reco
 
 [cols="1,1, 1"]
 |===
-|Cell in column 1, header row |Cell in column 2, header row 
 
 |layout
 |```layout: single```, ```layout: portfolio-page```
 
 |title
-|'''title: title:  "Ted Nelson's Evolutionary List File and Information Management"'''
+|'''title:  "Ted Nelson's Evolutionary List File and Information Management"'''
 
 |date
 |```2023-07-15 12:41:22 -0500```
 
 |tags
 |```tags:
+
   - Media Studies
+
   ```
 
 |summary
@@ -369,6 +370,7 @@ Note that the grid will always display a maximum of two pages per row, so I reco
 
 |skills
 |```skills:
+
   - Web Design
   - Adobe InDesign
   - HTML5 / CSS
@@ -376,6 +378,7 @@ Note that the grid will always display a maximum of two pages per row, so I reco
   - Project Management
   - Editorial Work
   - Adobe Premiere
+
   ```
 
 |site_header

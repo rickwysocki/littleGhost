@@ -4,7 +4,9 @@ Rick Wysocki <rlwysockijr@gmail.com>
 :description: This document provides instructions for installing Little Ghost, a simple but flexible Hugo theme.
 :keywords: hugo
 :imagesdir: assets/images
+:toc:
 ifdef::env-github[]
+:toc-placement!:
 :tip-caption: :bulb:
 :note-caption: :information_source:
 :important-caption: :heavy_exclamation_mark:
@@ -17,6 +19,10 @@ endif::[]
 image::ghost-post-image.png[]
 
 Little Ghost is a simple but flexible https://gohugo.io[Hugo] theme built with https://tailwindcss.com[Tailwind CSS]. Primarily designed for blogs and portfolio websites, it offers an easy and aesthetically pleasing kick-start to your site.
+
+ifdef::env-github[]
+toc::[]
+endif::[]
 
 == Installing Little Ghost
 
@@ -347,6 +353,7 @@ Note that the grid will always display a maximum of two pages per row, so I reco
 The table below indicates the available front matter fields for pages and posts and provides options and examples for their use.
 
 [cols="1,1"]
+[width=75%]
 |===
 |Field |Options/Example
 

@@ -3,12 +3,8 @@ Rick Wysocki <rlwysockijr@gmail.com>
 1, {docdate}
 :description: This document provides instructions for installing Little Ghost, a simple but flexible Hugo theme.
 :keywords: hugo
-:imagesdir: images
-:toc: left
-:icons: image
-:iconsdir: icons
-ifdef::env-github[]
 :imagesdir: assets/images
+ifdef::env-github[]
 :tip-caption: :bulb:
 :note-caption: :information_source:
 :important-caption: :heavy_exclamation_mark:
@@ -20,25 +16,25 @@ endif::[]
 
 image::ghost-post-image.png[]
 
-Little Ghost is a simple but flexible https://gohugo.io[Hugo] theme built with https://tailwindcss.com[Tailwind CSS]. It offers an easy and aesthetically pleasing kick-start to blogs and portfolio websites. is primarily designed for blogs and portfolio websites.
+Little Ghost is a simple but flexible https://gohugo.io[Hugo] theme built with https://tailwindcss.com[Tailwind CSS]. Primarily designed for blogs and portfolio websites, it offers an easy and aesthetically pleasing kick-start to your site.
 
-== Installing littleGhost
+== Installing Little Ghost
 
 === Prerequisites
 
 ==== Knowledge Prerequisites
 
-These instructions assume a working familiarity with the following practices:
+These instructions assume a familiarity with the following practices:
 
 * Using Hugo's capabilities as a content management system.
 * Navigating command-line interfaces.
-* Employing a text-editor, such as Virtual Studio Code, to edit a flat file structure.
+* Employing a text-editor, such as https://code.visualstudio.com/[Visual Studio Code], to edit a flat file structure.
 
 The instructions will explain features and/or uses of each of these concepts, but if you are truly new to any of them you should research them before moving forward here.
 
 ==== Software Prequisites
 
-You will need to install Node.JS, Node Package Manager, and Hugo installed on your machine to use Little Ghost. The following links provide installation instructions for each of these programs:
+You will first need to install Node.JS, Node Package Manager, and Hugo to use Little Ghost. The following links provide installation instructions for each of these programs:
 
 - https://nodejs.org/en[Node.js]
 - https://docs.npmjs.com/downloading-and-installing-node-js-and-npm[NPM]
@@ -47,7 +43,7 @@ You will need to install Node.JS, Node Package Manager, and Hugo installed on yo
 [TIP]
 .Checking Your Machine
 ====
-If you are unsure whether any or all of these prerequisite programs are installed on your machine, you can easily check each of them using your command-line interface using the following commands.
+If you are unsure whether any or all of these prerequisite programs are installed on your machine, you can easily check each of them using these commands in your command-line interface.
 
 * ```node -v```
 * ```npm -v```
@@ -58,9 +54,9 @@ If the software is installed, each command will return a version number.
 
 === Create Your Hugo Site and Add the Theme Files
 
-After you've installed Node.js, NPM, and Hugo, you're ready to create your Hugo site. In your command-line interface, navigate to the folder where you want to place your site. Then, run the following command, replacing "mysite" with the name of your site:
+After you've installed Node.js, NPM, and Hugo, you're ready to create your Hugo site. In your command-line interface, navigate to the folder where you want to place your site. Then, run the following command, replacing ```mysite``` with the name of your site:
 
-NOTE: These instructions will continue as though the name of the site is "mysite". 
+NOTE: These instructions will continue as though the name of the site is ```mysite```. 
 
 ```
   hugo new site mysite
@@ -107,7 +103,7 @@ npm run build-tw
 [NOTE]
 .Editing Tailwind Files
 ====
-If you like to tinker below the hood, you'll need to run ```npm run build-tw``` to update your site any time you change Tailwind-related content. If you want to do extensive editing of this content, I recommend the following:
+If you like to tinker below the hood, you'll need to run ```npm run build-tw``` to update your site any time you change Tailwind-related content, which can be repetitive and frustrating. If you want to do extensive editing of the Tailwind files, I recommend the following:
 
 1. Navigate to your theme folder in a separate command-line window.
 2. Run ```npx tailwindcss -i ./assets/main.css -o ./assets/style.css --watch```
@@ -117,14 +113,14 @@ This will rebuild your CSS automatically any time you make changes.
 
 == Configuring Your Site
 
-You need to add some content to your ```config.toml``` file before your site will run.
+You need to add some content to your ```config.toml``` file before your site can be built. Feel free to edit this content to suit your own purposes now, but you can also do so later.
 
 
 [source, yaml]
 ----
 baseURL = ""
 languageCode = 'en-us'
-title = ''
+title = 'mysite'
 theme = ["littleGhost"]
 enableInlineShortcodes = true
 
@@ -211,11 +207,11 @@ If you are still in the theme folder in your command-line interface, navigate ba
 hugo serve
 ```
 
-The local server returned by the command-line interface can now be used in a browser to view your site.
+The local server returned by the command-line interface can now be used in a browser to view your site. Congratulations!
 
 == Page Layout and Front Matter Options
 
-There are two page layouts in Little Ghost: 
+At this point, your site should run. Your task now is to populate your site with content. There are two page layouts in Little Ghost: 
 
 * single.
 * project-page.
@@ -226,7 +222,7 @@ They are *extremely* similar, but portfolio pages offer an additional feature, d
 
 Single layouts are simple. Because Hugo is agnostic to the difference between posts and pages, you can use the single layout for essentially any content you create.
 
-There are a number of different front matter variables you can use for pages in Little Ghost. Here's an example of front matter for a blog post:
+There are a number of front matter fields you can use for pages in Little Ghost (see <<_front_matter_options>> below for a full list). Here's an example of front matter for a blog post:
 
 [source, yaml]
 ----
@@ -292,7 +288,7 @@ featured_image: featured.png
 featured_alt: Making Future Matters logo.
 ----
 
-I recommend including images using [Hugo page bundles](https://gohugo.io/content-management/page-bundles/) for the most seamless experience. A `featured_image` assigned in the front matter will display at the top of the page as well as on list pages. For additional images, I recommend using the standard [Hugo figure shortcode](https://gohugo.io/content-management/shortcodes/).
+I recommend including images using https://gohugo.io/content-management/page-bundles/[Hugo page bundles] for the most seamless experience. A `featured_image` assigned in the front matter will display at the top of the page as well as on list pages. For additional images, I recommend using the standard https://gohugo.io/content-management/shortcodes/[Hugo figure shortcode].
 
 === Navigation
 
@@ -325,6 +321,8 @@ You can add any other pages to the site navigation in your config file. For exam
       weight = 4
 ----
 
+You can edit the ```weight``` in the markup above to reorder the pages in the nagivation.
+
 === Featured
 
 Little Ghost has an additional function that allows you to create featured content, which can be displayed on any page. This takes two steps.
@@ -346,8 +344,11 @@ Note that the grid will always display a maximum of two pages per row, so I reco
 
 == Front Matter Options
 
+The table below indicates the available front matter fields for pages and posts and provides options and examples for their use.
+
 [cols="1,1"]
 |===
+|Field |Options/Example
 
 |layout
 a|

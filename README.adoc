@@ -372,7 +372,7 @@ layout: portfolio-page
 a|
 [source, yaml]
 ----
-title:  "Ted Nelson's Evolutionary List File and Information Management"```
+title: "Ted Nelson's Evolutionary List File and Information Management"
 ----
 
 |date

@@ -353,7 +353,6 @@ Note that the grid will always display a maximum of two pages per row, so I reco
 The table below indicates the available front matter fields for pages and posts and provides options and examples for their use.
 
 [cols="1,1"]
-[width=75%]
 |===
 |Field |Options/Example
 
